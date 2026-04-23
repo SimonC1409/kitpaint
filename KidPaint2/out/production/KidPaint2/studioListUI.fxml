@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1"
+      >
+   <padding>
+      <Insets top="30" right="30" bottom="30" left="30"/>
+   </padding>
+
+   <Label text="Select a Studio or Create New" style="-fx-font-size: 24; -fx-font-weight: bold"/>
+
+   <ListView fx:id="studioListView" prefHeight="300" prefWidth="400"/>
+
+   <HBox spacing="10" alignment="CENTER">
+      <TextField fx:id="newStudioField" promptText="Enter new studio name" prefWidth="250"/>
+      <Button text="Create New" onAction="#createStudio" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+   </HBox>
+
+   <Button text="Join Selected Studio" onAction="#joinSelected" prefWidth="300"
+           style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 16;"/>
+</VBox>
